@@ -16,7 +16,7 @@
     --color-surface: #d1d1d1;
     --color-text: #1a1a1e;
 }
-/* Importing fonts */
+/* [CSS: importing fonts] */
 @font-face {
   font-family: 'OswaldRegular';
   src: url('/fonts/Oswald-Regular.woff2') format('woff2');
@@ -41,7 +41,7 @@
   font-style: normal;
   font-display: swap;
 }
-/* CSS for default html tags */
+/* [CSS: default html tags] */
 html {
     scroll-behavior: smooth;
 }
@@ -75,7 +75,8 @@ img{
     height: 100%;
 }
 a {
-    all: unset; /* Why? It disturbs when making divs work as buttons */
+    all: unset; 
+    border-radius: 0.5rem;
 }
 a:hover {
     cursor: pointer;
@@ -86,24 +87,24 @@ p {
     overflow-wrap: break-word;
 }
 ::-webkit-scrollbar {
-  width: 0.375rem;
-  height: 0.375rem; 
+    width: 0.375rem;
+    height: 0.375rem; 
 }
 ::-webkit-scrollbar-track {
-  background: #1a1a1e; 
+    background: #1a1a1e; 
 }
 ::-webkit-scrollbar-thumb {
-  background: #55555a; 
-  border-radius: 0.1875rem; 
+    background: #55555a; 
+    border-radius: 0.1875rem; 
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #77777c; 
+    background: #77777c; 
 }
 * {
-  scrollbar-width: thin; 
-  scrollbar-color: #55555a #1a1a1e;
+    scrollbar-width: thin; 
+    scrollbar-color: #55555a #1a1a1e;
 }
-/* CSS for custom classes */
+/* [CSS: custom classes] */
 .content {
     width: 68.125rem;
     max-width: 100%;
@@ -112,10 +113,22 @@ p {
     flex-direction: column;
     align-items: center;
 }
-/* CSS for text colors */
+#displayMobile {
+    display: none;
+}
+/* [CSS: text colors] */
 .cyan {
   color: cyan;
 }
 .red {
   color: rgb(255, 24, 24);
+}
+/* [CSS: Global changes for mobile] */
+@media (max-width: 768px) {
+  #displayPC {
+    display: none;
+  }
+  #displayMobile {
+    display: contents;
+  }
 }

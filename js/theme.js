@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         instagram: document.querySelector('img[src*="instagram"]')
     };
 
-    // --- INITIAL THEME SETUP ---
+    // [INITIAL THEME SETUP]
     let savedTheme = localStorage.getItem("theme");
     if (!savedTheme) {
         savedTheme = "dark";
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     updateButtonIcon(savedTheme);
 
-    // --- THEME BUTTON HOVER ---
+    // [themebtn:hover]
     themeButton.addEventListener("mouseenter", () => {
         const currentTheme = document.documentElement.getAttribute("data-theme");
         themeImg.src = currentTheme === "light"
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         updateButtonIcon(currentTheme);
     });
 
-    // --- ICON PATHS ---
+    // [ICONS PATH]
     const iconPaths = {
         telegram: {
             dark: "icons/telegramDarkMode.png",
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // --- APPLY THEME TO SOCIAL ICONS ---
+    // [APPLY THEME: SOCIAL ICONS]
     function updateSocialIcons(theme) {
         for (const key in socialIcons) {
             if (socialIcons[key]) {
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // --- HEADER & LINK ICON LOGIC ---
+    // [HEADER & LINK LOGIC]
     function updateHeaderAndLinkIcons(theme) {
         const headerLogos = document.querySelectorAll(".containerHeaderLogo img");
         const linkIcons = document.querySelectorAll(".linkIcon img");
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // --- SOCIAL ICON HOVER EFFECTS ---
+    // [SOCIAL ICONS HOVER EFFECT]
     for (const key in socialIcons) {
         const icon = socialIcons[key];
         if (!icon) continue;
@@ -143,11 +143,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // --- INITIAL ICONS ---
+    // [INTIAL ICONS]
     updateSocialIcons(savedTheme);
     updateHeaderAndLinkIcons(savedTheme);
 
-    // --- THEME TOGGLE ---
+    // [THEME TOGGLE]
     let switchCount = 0;
     themeButton.addEventListener("click", () => {
         const currentTheme = document.documentElement.getAttribute("data-theme");
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // --- VIDEO HANDLING ---
+    // [MEME HANDLING]
     function playVideo(src) {
         trumpMeme.style.display = "flex";
         videoEl.src = src;
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     }
 
-    // --- PRELOAD VIDEOS ---
+    // [OPTIMIZATION: preload trump meme]
     function preloadVideo(src) {
         const v = document.createElement("video");
         v.src = src;

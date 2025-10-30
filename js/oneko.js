@@ -1,4 +1,4 @@
-// oneko.js - cursed but safe version by bugzorc
+// [oneko.js - cursed but safe version by qahnaxy]
 (function oneko() {
   const isReducedMotion =
     window.matchMedia(`(prefers-reduced-motion: reduce)`) === true ||

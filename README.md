@@ -13,7 +13,7 @@ This portfolio’s components, animations, and backend flow are built entirely f
 **Version V3.0.0** — Core build of the portfolio  
 **Version V3.8.3** — Major upgrade featuring cleaner architecture, refined UI logic, and faster asset delivery.  
 
-Every project listed here runs live — no mockups, no templates, no borrowed code. Just systems I’ve built end-to-end.  
+Every project listed here runs live: no mockups, no templates, no borrowed code. Just systems I’ve built end-to-end.  
 
 ---
 

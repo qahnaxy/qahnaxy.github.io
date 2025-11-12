@@ -16,6 +16,17 @@
     --color-surface: #d1d1d1;
     --color-text: #1a1a1e;
 }
+/* [IPHONE FIX: MAN, I HATE FIREFOX AND IPHONE, CAN'T THEY JUST FOLLOW THE STANDARDS] */
+html, body {
+    -webkit-text-size-adjust: 100%; 
+    -webkit-tap-highlight-color: transparent; 
+    -webkit-touch-callout: none; 
+    overscroll-behavior: none;
+}
+* {
+    -webkit-font-smoothing: antialiased; /* Crisper text rendering */
+    -moz-osx-font-smoothing: grayscale;
+}
 /* [CSS: importing fonts] */
 @font-face {
   font-family: 'OswaldRegular';
@@ -131,4 +142,5 @@ p {
   #displayMobile {
     display: contents;
   }
+
 }

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const button = document.querySelector('.online');
+    const button = document.querySelector('.bookCall');
 
     if (button) {
         button.addEventListener('click', () => {

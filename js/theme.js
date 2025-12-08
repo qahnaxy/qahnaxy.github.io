@@ -193,4 +193,70 @@ document.addEventListener("DOMContentLoaded", () => {
     preloadVideo("media/videos/muchbetter.mp4");
 
     trumpMeme.style.display = "none";
+
+    // [NAVBAR THEME HANDLING]
+    const navItems = document.querySelectorAll(".navCont");
+
+    const navIcons = {
+        home: {
+            dark: "icons/home.png",
+            light: "icons/homeLightMode.png",
+            active: "icons/homeActive.png"
+        },
+        about: {
+            dark: "icons/about.png",
+            light: "icons/aboutLightMode.png",
+            active: "icons/aboutActive.png"
+        },
+        projects: {
+            dark: "icons/projects.png",
+            light: "icons/projectsLightMode.png",
+            active: "icons/projectsActive.png"
+        },
+        services: {
+            dark: "icons/services.png",
+            light: "icons/servicesLightMode.png",
+            active: "icons/servicesActive.png"
+        },
+        contact: {
+            dark: "icons/contact.png",
+            light: "icons/contactLightMode.png",
+            active: "icons/contactActive.png"
+        }
+    };
+
+    function updateNavbarIcons(theme) {
+        navItems.forEach(item => {
+            const section = item.dataset.section;
+            const img = item.querySelector("img");
+
+            img.src = theme === "light"
+                ? navIcons[section].light
+                : navIcons[section].dark;
+        });
+    }
+
+    updateNavbarIcons(savedTheme);
+
+    themeButton.addEventListener("click", () => {
+        const theme = document.documentElement.getAttribute("data-theme");
+        updateNavbarIcons(theme);
+    });
+
+    navItems.forEach(item => {
+        const section = item.dataset.section;
+        const img = item.querySelector("img");
+
+        item.addEventListener("mouseenter", () => {
+            img.src = navIcons[section].active;
+        });
+
+        item.addEventListener("mouseleave", () => {
+            const theme = document.documentElement.getAttribute("data-theme");
+            img.src = theme === "light"
+                ? navIcons[section].light
+                : navIcons[section].dark;
+        });
+    });
+
 });

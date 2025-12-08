@@ -1,19 +1,18 @@
 <!--
-     ██████╗  █████╗ ██╗  ██╗███╗   ██╗ █████╗ ██╗  ██╗██╗   ██╗
-    ██╔═══██╗██╔══██╗██║  ██║████╗  ██║██╔══██╗╚██╗██╔╝╚██╗ ██╔╝
-    ██║   ██║███████║███████║██╔██╗ ██║███████║ ╚███╔╝  ╚████╔╝ 
-    ██║▄▄ ██║██╔══██║██╔══██║██║╚██╗██║██╔══██║ ██╔██╗   ╚██╔╝  
-    ╚██████╔╝██║  ██║██║  ██║██║ ╚████║██║  ██║██╔╝ ██╗   ██║   
-     ╚══▀▀═╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝ 
+     ██████╗  █████╗ ██╗  ██╗███╗   ██╗ █████╗ ██╗  ██╗██╗   ██╗  
+    ██╔═══██╗██╔══██╗██║  ██║████╗  ██║██╔══██╗╚██╗██╔╝╚██╗ ██╔╝ 
+    ██║   ██║███████║███████║██╔██╗ ██║███████║ ╚███╔╝  ╚████╔╝        
+    ██║▄▄ ██║██╔══██║██╔══██║██║╚██╗██║██╔══██║ ██╔██╗   ╚██╔╝    ₍^. .^₎⟆
+    ╚██████╔╝██║  ██║██║  ██║██║ ╚████║██║  ██║██╔╝ ██╗   ██║   -----------
+     ╚══▀▀═╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝      /   \
     -----------------------------------------------------------------------
-    Allahumma akthir mali, wa waladi, wa barik li fima a’taytani.
+    Allahumma akthir mali, wa waladi, wa barik li fima a’taytani. Salaam G
     -----------------------------------------------------------------------
     Coded & optimized[80%] by: QAHNAXY
     Classification: OPEN SOURCE / AUTHORIZED REPRODUCTION ALLOWED
-    Attribution: Wife (SAUNA) – Primary Support & Belief Vector, I💜U
     -----------------------------------------------------------------------
     STACK DEPLOYMENT:
-    - html, css, js, PHP, human brain
+    - html, css, js, human brain
     - Frameworks/Libraries: no junkie frameworks
     - icons by icon8.com
     =======================================================================                  
@@ -58,8 +57,8 @@
     <meta name="twitter:image:alt" content="Qahnaxy Portfolio Preview" />
 
     <!-- [SYSTEM: PRELOAD FONTS] -->
-    <link rel="preload" href="/fonts/Oswald-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/Oswald-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Oswald-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Oswald-Bold.woff2" as="font" type="font/woff2" crossorigin>
     
     <!-- [SYSTEM: STYLESHEETS] -->
     <link rel="stylesheet" href="css/global.css">
@@ -86,11 +85,30 @@ send the code: twitter/telegram/discord @qahnaxy.
 
         <!-- [NAVBAR SYSTEM] -->
         <div class="navbar" role="navigation">
-            <a href="#home" class="nav">Home</a>
-            <a href="#about" class="nav">About</a>
-            <a href="#projects" class="nav">Projects</a>
-            <a href="#services" class="nav">Services</a>
-            <a href="#contact" class="nav">Contact</a>
+            <a href="#home" class="navCont"  data-section="home">
+                <img src="icons/home.png">
+                <p class="nav">Home</p>
+            </a>
+        
+            <a href="#about" class="navCont" data-section="about">
+                <img src="icons/about.png">
+                <p class="nav">About</p>
+            </a>
+        
+            <a href="#projects" class="navCont"  data-section="projects">
+                <img src="icons/projects.png">
+                <p class="nav">Projects</p>
+            </a>
+        
+            <a href="#services" class="navCont" data-section="services">
+                <img src="icons/services.png">
+                <p class="nav">Services</p>
+            </a>
+        
+            <a href="#contact" class="navCont" data-section="contact">
+                <img src="icons/contact.png">
+                <p class="nav">Contact</p>
+            </a>
         </div>
 
         <!-- [SECTION: HOME] -->
@@ -107,55 +125,48 @@ send the code: twitter/telegram/discord @qahnaxy.
             <div class="trumpMeme">
                 <video src="media/videos/turnoff.mp4" playsinline fetchpriority="high"></video>
             </div>
-
+            <!-- [MAIN INFO ON HOMEPAGE] -->
             <div class="brief">
-                <div class="username">
-                    <p>QAHNAXY</p>
-                </div>
-                <div class="bio">
-                    <p>"Yes, I am the only web developer you'll ever need, let's create it NOW"</p>
-                </div>
-                <div class="techstack">
-                    <div class="tech">
-                        <img src="icons/html.png" alt="tech stack" loading="lazy" fetchpriority="high">
+                <div class="briefText">
+                    <div class="briefMainText">
+                        <p>I Build Websites That Outperforms<br>
+                        Your Competition</p>
                     </div>
-                    <div class="tech">
-                        <img src="icons/css.png" alt="tech stack" loading="lazy" fetchpriority="high">
+                    <div class="briefmoreText">
+                        <p>You don't need another generic build, you need a developer who understands performance, <br>brand perception and how a website is beneficial. I build the advantage your competitors<br>can't copy.</p>
                     </div>
-                    <div class="tech">
-                        <img src="icons/js.png" alt="tech stack" loading="lazy" fetchpriority="high">
-                    </div>
-                    <div class="tech">
-                        <img src="icons/php.png" alt="tech stack" loading="lazy" fetchpriority="high">
-                    </div>
-                    <div class="tech">
-                        <img src="icons/nginx.png" alt="tech stack" loading="lazy" fetchpriority="high">
-                    </div>
-                    <div class="tech">
-                        <img src="icons/apache.png" alt="tech stack" loading="lazy" fetchpriority="high">
-                    </div>
-                    <div class="tech" id="rotateTech">
-                        <img src="icons/mysql.png" alt="tech stack" loading="lazy" fetchpriority="high">
-                    </div>
-                </div>
-                <div class="hmu">
-                    <div class="clientServiced">
-                        <p id="displayPC"> 34 Satisfied Clients</p>
-                        <p id="displayMobile"> Satisfied Clients</p>
-                    </div>
-                    <button class="online">
-                        <p>ONLINE</p>
+                    <button class="bookCall">
+                        <p>Book a Call</p>
                     </button>
-                    <a href="db/cv/hezronlokweiCV.pdf" download class="cv">
-                        <div>
-                            <p>CV</p>
-                        </div>
-                        <div class="downloadLogo">
-                            <img src="icons/download.png" alt="download Logo" loading="lazy">
-                        </div>
-                    </a>
                 </div>
-            </div>
+                <div class="briefVideo">
+                    <div class="imgCardBg">
+                        <img src="media/static/mc.png">
+                    </div>
+                    
+                    <div class="briefVideoCard">
+                        <div class="cardCol">
+                            <p class="mainCardColTxt"><span>Hezron Lokwei</span></p>
+                            <p class="cardColdTxt"><span class="purple">Web Developer</span></p>
+                        </div>
+                        <div class="line"></div>
+                        <div class="cardCol">
+                            <p class="cardColdTxt">Founder of</p>
+                            <p class="mainCardColTxt">GBUNXY LLC</p> </div>
+                    </div>
+                    <div class="satisfiedClients">
+                        <div class="noOfClients">
+                            <p>34</p>
+                        </div>
+                        <div>
+                            <p>Satisfied Clients World Wide</p>
+                        </div>
+                    </div>
+                    <div class="logoCard">
+                        <img src="icons/logo.png">
+                    </div>
+                </div>
+            </div>   
         </div>
     
         <!-- [SECTION: ABOUT / LIFE] -->
@@ -171,20 +182,43 @@ send the code: twitter/telegram/discord @qahnaxy.
                 </div>
                 <div class="aboutMeText">
                     <p>
-                      Hi there👋! I am Hezron known online as qahnaxy, I am a fullstack dev by day🌄, and a web security enthusiats by night🌒.
-                      <br>
-                      <u><b>SKILLS:</b></u>
-                      <br>
-                      🔅<b>Front-End:</b> React.js, Next.js, Javascript, TypeScript, HTML5, CSS3, TailwindCSS, Bootstrap
-                      <br>
-                      🔅<b>Back-End:</b> Node.js, Express, PHP, Laravel, REST APIs, MySQL, MongoDB, PostgreSQL
-                      <br>
-                      🔅<b>Cloud Platforms:</b> Azure AD, Okta, Intune, AWS, Docker, cloudfare
-                      <br>
-                      🔅<b>Website Security:</b>
-                      <br>
-                      “Your website is your handshake with the world, I will make it firm and friendly.”
+                        I am Hezron known online as Qahnaxy, a fullstack dev by day and a web security enthusiat by night.
                     </p>
+                    <p>
+                        <u><b>SKILLS:</b></u>
+                        <br>
+                        🔅<b>Front-End:</b> React.js, Next.js, Javascript, TypeScript, HTML5, CSS3, TailwindCSS, Bootstrap
+                        <br>
+                        🔅<b>Back-End:</b> Node.js, Express, PHP, Laravel, REST APIs, MySQL, MongoDB, PostgreSQL
+                        <br>
+                        🔅<b>Cloud Platforms:</b> Azure AD, Okta, Intune, AWS, Docker, cloudfare
+                        <br>
+                        🔅<b>Website Security:</b>
+                        <br>
+                    </p>
+                    <p>
+                        <u><b>TECHSTACK:</b></u>
+                    </p>
+                    <div class="techstack">
+                        <div class="stackHolder"> 
+                            <img src="icons/html.png">
+                            <img src="icons/css.png">
+                            <img src="icons/js.png">
+                            <img src="icons/php.png">
+                            <img src="icons/flutter.png">
+                            <img src="icons/erlang.png">
+                            <img src="icons/apache.png">
+                        </div> 
+                        <div class="stackHolder">
+                            <img src="icons/nginx.png">
+                            <img src="icons/mysql.png">
+                            <img src="icons/cloudfare.png">
+                            <img src="icons/aws.png">
+                            <img src="icons/kubernets.png">
+                            <img src="icons/figma.gif">
+                            <img src="icons/vs.png">
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -264,6 +298,48 @@ send the code: twitter/telegram/discord @qahnaxy.
             <div class="projectsCont">
                 <div class="project">
                     <div class="projectThumbnail">
+                        <img src="media/static/projectThumbCover.png">
+                        <img src="media/static/nea.jpg" alt="project thumbnail" loading="lazy">
+                    </div>
+                    <div class="projectDescription-techstack">
+                        <div class="projectDescription">
+                            <p>an online academy from scratch</p>
+                        </div>
+                        <div class="projectTechstack">
+                            <div class="stack">
+                                <img src="icons/html.png" alt="stack icon" loading="lazy">
+                            </div>
+                            <div class="stack">
+                                <img src="icons/css.png" alt="stack icon" loading="lazy">
+                            </div>
+                            <div class="stack">
+                                <img src="icons/js.png" alt="stack icon" loading="lazy">
+                            </div>
+                            <div class="stack">
+                                <img src="icons/php.png" alt="stack icon" loading="lazy">
+                            </div>
+                            <div class="stack">
+                                <img src="icons/mysql.png" alt="stack icon" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projectName-Link">
+                        <div class="projectName">
+                            <p>N. E. Academy</p>
+                        </div>
+                        <a href="https://kabbafx.com/" target="_blank" rel="noopener"  class="projectLink">
+                            <div class="linkIcon">
+                                <img src="icons/link.png" alt="link icon" loading="lazy">
+                            </div>
+                            <div class="linkText">
+                               NDA
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="projectThumbnail">
+                        <img src="media/static/projectThumbCover.png">
                         <img src="media/static/pkabbafx.png" alt="project thumbnail" loading="lazy">
                     </div>
                     <div class="projectDescription-techstack">
@@ -298,6 +374,7 @@ send the code: twitter/telegram/discord @qahnaxy.
                 </div>
                 <div class="project">
                     <div class="projectThumbnail">
+                        <img src="media/static/projectThumbCover.png">
                         <img src="media/static/pkingfire.png" alt="project thumbnail" loading="lazy">
                     </div>
                     <div class="projectDescription-techstack">
@@ -338,6 +415,7 @@ send the code: twitter/telegram/discord @qahnaxy.
                 </div>
                 <div class="project">
                     <div class="projectThumbnail">
+                        <img src="media/static/projectThumbCover.png">
                         <img src="media/static/pbugzorc.png" alt="project thumbnail" loading="lazy">
                     </div>
                     <div class="projectDescription-techstack">
@@ -381,14 +459,14 @@ send the code: twitter/telegram/discord @qahnaxy.
                         <img src="icons/stack.png" alt="stack" loading="lazy">
                     </div>
                     <div class="containerHeaderText">
-                        <p>Services (NB: this is the starting price)</p>
+                        <p class="fontSize14">Services (NB: this is the starting price)</p>
                     </div>
                 </div>
                 <div class="containerHeaderNav" id="servicesNav">
-                    <div class="containerHeaderLeftNav">
+                    <div class="containerHeaderLeftNav" id="sPrev">
                         <img src="icons/arrow-left.png" alt="left nav" loading="lazy">
                     </div>
-                    <div class="containerHeaderRightNav">
+                    <div class="containerHeaderRightNav" id="sNext">
                         <img src="icons/arrow-right.png" alt="right nav" loading="lazy">
                     </div>
                 </div>
@@ -631,7 +709,7 @@ send the code: twitter/telegram/discord @qahnaxy.
                       Feel free to reach out with any questions or requests, I'm here to help! The best way to contact me is via the email section conveniently placed on the right. 
                       <br>You can also slide into the DMs if that’s more your style.
                       <br><b>Note: </b>I’m off-duty from 10:00 PM to 5:10 AM (UTC+3), even royalty needs sleep.
-                      Catch you later, King 👑
+                      Catch you later fellow human.
                     </div>
                     <div class="socials">
                         <a href="https://t.me/qahnaxy" class="social">
@@ -694,7 +772,7 @@ send the code: twitter/telegram/discord @qahnaxy.
 
         <!-- [FOOTER] -->
         <div class="footer"id="contact">
-          <p>Made with <span class="heart">💜</span> qahnaxy / V3.8.3 <a href="https://github.com/qahnaxy/qahnaxy.github.io" target="_blank" class="opensource">OpenSource</a> / Backed by my wife, Sauna.</p>
+          <p>Made with <span class="heart">💜</span> qahnaxy / V4.8.3 <a href="https://github.com/qahnaxy/qahnaxy.github.io" target="_blank" class="opensource">OpenSource</a></p>
         </div>
 
     </div>
@@ -706,6 +784,8 @@ send the code: twitter/telegram/discord @qahnaxy.
     <script src="js/localtime.js"></script>
     <script src="js/onlineBtn.js"></script>
     <script src="js/contactMe.js" defer></script>
+    <script src="js/projectNav.js"></script>
+    <script src="js/servicesNav.js"></script>
 </body>
 
 </html>

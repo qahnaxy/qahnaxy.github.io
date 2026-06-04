@@ -1,0 +1,636 @@
+<!--
+----------------------------------------------------------------------------------------------
+    ██████      █████████   █████   █████ ██████   █████   █████████   █████ █████ █████ █████
+  ███▒▒▒▒███   ███▒▒▒▒▒███ ▒▒███   ▒▒███ ▒▒██████ ▒▒███   ███▒▒▒▒▒███ ▒▒███ ▒▒███ ▒▒███ ▒▒███ 
+ ███    ▒▒███ ▒███    ▒███  ▒███    ▒███  ▒███▒███ ▒███  ▒███    ▒███  ▒▒███ ███   ▒▒███ ███  
+▒███     ▒███ ▒███████████  ▒███████████  ▒███▒▒███▒███  ▒███████████   ▒▒█████     ▒▒█████   
+▒███   ██▒███ ▒███▒▒▒▒▒███  ▒███▒▒▒▒▒███  ▒███ ▒▒██████  ▒███▒▒▒▒▒███    ███▒███     ▒▒███    
+▒▒███ ▒▒████  ▒███    ▒███  ▒███    ▒███  ▒███  ▒▒█████  ▒███    ▒███   ███ ▒▒███     ▒███    
+ ▒▒▒██████▒██ █████   █████ █████   █████ █████  ▒▒█████ █████   █████ █████ █████    █████   
+   ▒▒▒▒▒▒ ▒▒ ▒▒▒▒▒   ▒▒▒▒▒ ▒▒▒▒▒   ▒▒▒▒▒ ▒▒▒▒▒    ▒▒▒▒▒ ▒▒▒▒▒   ▒▒▒▒▒ ▒▒▒▒▒ ▒▒▒▒▒    ▒▒▒▒▒    
+Why are you here, what did you expect? C++? Trust issues? Lol, go ahead human, look around. :)                                                                                                   
+----------------------------------------------------------------------------------------------
+Allahumma akthir mali, wa waladi, wa barik li fima a'taytani. Salaam G    |  
+Coded & optimized [80%] by: QAHNAXY |          | 
+Classification: OPEN SOURCE / AUTHORIZED REPRODUCTION ALLOWED             |
+STACK DEPLOYMENT:                                                         |  
+- html, css, js, human brain                                              |  
+- Frameworks/Libraries: tailwind css                                      |  
+- SVGs from: https://heroicons.com/                                       |
+---------------------------------------------------------------------------
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- [SYSTEM: SEO SECTION]-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-DNS-Prefetch-Control" content="on" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+    <title>QAHNAXY | FullStack Developer</title>
+
+    <!-- [PRIMARY SEO]-->
+    <meta name="description" content="Qahnaxy (Hezron Lokwei) is a full stack developer building high performance websites, trading academies, and monetization systems for trader coaches. View portfolio, case studies, and get a scalable system for your trading business." />
+    <meta name="keywords" content="Qahnaxy, Hezron Lokwei, trader website developer, trading academy website, forex website developer, full stack developer for traders, trading business systems, web developer portfolio" />
+    <meta name="author" content="Qahnaxy" />
+
+    <!-- [CANONICAL URL]-->
+    <link rel="canonical" href="https://qahnaxy.github.io/" />
+
+    <!-- [SCRIPTS] -->
+    <script src="js/contactAnimation.js"></script>
+
+    <!-- [NB: for local development only]-->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <link href="css/global.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Outfit:wght@400;600;700;900&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3b82f6", // Electric Blue
+              "background-light": "#f8fafc",
+              "background-dark": "#020617", // Deep space blue-black
+              "navy-glass": "rgba(15, 23, 42, 0.85)",
+            },
+            fontFamily: {
+              display: ["Outfit", "sans-serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.75rem",
+              "2xl": "1.5rem",
+              "3xl": "2rem",
+            },
+            animation: {
+              "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              float: "float 6s ease-in-out infinite",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-background-light font-sans text-slate-900 transition-colors duration-300">
+    <!--CONGRATULATIONS YOU HAVE FOUND MY SECRET MESSAGE
+    decode this NDMyNQk1= and send it to me: 
+    1.🍸Bugzorc 2.🍸Casusbelli 3.🍸zg200 4.🍸Code_Dictator
+    5.🍸tonabrix1
+      
+    send the code: twitter/telegram/discord @bugzorc
+    -->
+    <!-- [SECTION: background effects]-->
+    <div class="fixed inset-0 pointer-events-none z-0">
+      <div class="absolute inset-0 nebula"></div>
+      <div class="absolute inset-0 star-field opacity-30"></div>
+      <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400 rounded-full blur-sm animate-pulse-slow"></div>
+      <div class="absolute top-3/4 left-1/2 w-1 h-1 bg-white rounded-full blur-[1px] animate-ping"></div>
+      <div class="absolute top-1/3 right-1/4 w-2 h-2 bg-blue-500 rounded-full blur-sm opacity-50 animate-bounce" style="animation-duration: 10s"></div>
+      <div class="absolute top-1/2 right-10 w-24 h-24 border border-primary/20 rounded-full animate-float opacity-20"></div>
+      <div class="absolute bottom-1/4 left-10 w-16 h-16 border border-blue-400/20 rotate-45 animate-float opacity-20"></div>
+    </div>
+
+    <!-- [SECTION: header]-->
+    <header class="relative z-20 flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+      <div class="text-2xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-400">
+        QAHNAXY
+      </div>
+
+      <!-- [SUB-SECTION: top right options]-->
+      <div class="flex items-center gap-4">
+        <div id="nairobiTime" class="glass-panel px-4 py-2 rounded-full text-background-light text-sm font-medium" aria-label="Kenya time">
+          --:--
+        </div>
+        <a class="glass-panel px-6 py-2 rounded-full text-background-light text-sm font-medium hover:bg-primary hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300" href="#" data-coming-soon>
+          Blogs
+        </a>
+        <a class="glass-panel px-6 py-2 rounded-full text-background-light text-sm font-medium hover:bg-primary hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300" href="#" data-coaching-modal-trigger>
+          1on1 Coaching
+        </a>
+      </div>
+    </header>
+
+    <!-- [SECTION: hero]-->
+    <main id="home" class="relative z-10 max-w-7xl mx-auto px-8 pt-12 flex flex-col lg:flex-row items-center justify-between gap-12">
+      <div class="flex-1 space-y-8 text-center lg:text-left">
+        <h1 class="font-display text-5xl lg:text-7xl font-black leading-tight tracking-tight">
+          I Build
+          <span class="text-primary drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">Websites</span>
+          That Convert Consistently
+        </h1>
+        <p class="text-lg lg:text-xl text-slate-600 max-w-2xl leading-relaxed">
+          You don't need just a Website. You need a developer who understands
+          trading brands, performance, and how your platform converts.
+        </p>
+        <!-- [SUB-SECTION: hero call to action]-->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <a href="#why-me" class="text-white px-10 py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/30 glass-panel text-background-light text-sm font-medium hover:bg-primary transition-all hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300">
+            <p>Why Me</p>
+          </a>
+          <div class="contact-me-wrap" data-contact-animation>
+            <span class="contact-me-burst" data-contact-animation-burst aria-hidden="true"></span>
+            <button type="button" class="contact-me-button bg-primary hover:bg-blue-600 text-white px-10 py-4 rounded-xl font-bold text-lg shadow-lg shadow-primary/30 transform transition-all active:scale-95" data-contact-animation-trigger>
+              <span class="contact-me-button__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" />
+                </svg>
+              </span>
+              <span class="contact-me-button__label">Contact Me</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-1 flex justify-center lg:justify-end relative">
+        <div class="relative animate-float">
+          <div class="bg-slate-100 p-3 rounded-[2.5rem] border-[12px] border-primary shadow-[0_0_50px_rgba(59,130,246,0.3)]">
+            <div class="bg-blue-200 rounded-[1.5rem] overflow-hidden w-[350px] aspect-[4/5] relative">
+              <img alt="Hezron Lokwei Portrait" class="w-full h-full object-cover grayscale-0 hover:grayscale transition-all duration-500" src="media/statics/pfp.png" />
+              <div class="absolute bottom-8 left-6 flex gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-red-600 drop-shadow-md">
+                  <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-red-600 drop-shadow-md">
+                  <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-red-600 drop-shadow-md">
+                  <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="absolute -left-12 top-20 glass-panel p-5 rounded-2xl shadow-xl w-48">
+            <h3 class="font-display font-bold text-background-light text-lg leading-none">
+              Hezron Lokwei
+            </h3>
+            <p class="text-primary text-xs font-bold mt-1 uppercase tracking-wider">
+              Web Developer
+            </p>
+            <div class="mt-4 pt-4 border-t border-white/10">
+              <p class="text-xs text-primary uppercase font-bold tracking-tighter leading-none mb-1">
+                Building
+              </p>
+              <p class="font-display font-black text-sm text-background-light">
+                GBUNXY
+              </p>
+            </div>
+          </div>
+
+          <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-slate-900 p-3 rounded-full flex items-center gap-3 shadow-2xl border border-primary/50 w-max min-w-[280px]">
+            <div class="bg-primary h-12 w-12 shrink-0 rounded-full flex items-center justify-center font-black text-white text-lg">
+              34
+            </div>
+            <div class="flex flex-col">
+              <span class="font-bold text-sm tracking-wide text-white">Satisfied Clients</span>
+              <div class="flex items-center gap-1 mt-1">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-[28px] w-[28px] text-yellow-300">
+                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-[28px] w-[28px] text-yellow-300">
+                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-[28px] w-[28px] text-yellow-300">
+                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-[28px] w-[28px] text-yellow-300">
+                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-[28px] w-[28px] text-yellow-300">
+                  <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+            <img src="icons/badge.png" alt="Badge" class="w-12 h-12 rounded-full shadow-lg" />
+          </div>
+
+          <div class="absolute -right-6 top-1/2 glass-panel p-3 rounded-xl shadow-xl border-primary/20">
+            <svg fill="#3b82f6" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 937 937" xml:space="preserve" class="w-8 h-8">
+              <g>
+                <path d="M905.7,753.55H562.2c-3.7,0-6.7,3-6.7,6.701v0.299c0,13.801-11.2,25-25,25h-130c-13.8,0-25-11.199-25-25v-0.299c0-3.701-3-6.701-6.7-6.701H25.3c-13.8,0-25,11.201-25,25v39c0,13.801,11.2,25,25,25h880.4c13.8,0,25-11.199,25-25v-39C930.7,764.751,919.5,753.55,905.7,753.55z M852.8,798.251c0,6.799-5.5,12.398-12.399,12.398h-53.5c-6.801,0-12.4-5.5-12.4-12.398v-0.301c0-6.801,5.5-12.4,12.4-12.4h53.5c6.8,0,12.399,5.5,12.399,12.4V798.251z"/>
+                <path d="M849.5,94.45h-762c-48.2,0-87.5,39.3-87.5,87.5v448.1c0,48.201,39.3,87.5,87.5,87.5h762c48.2,0,87.5-39.299,87.5-87.5v-448.1C937,133.75,897.7,94.45,849.5,94.45z M862,630.05c0,6.9-5.6,12.5-12.5,12.5h-762c-6.9,0-12.5-5.6-12.5-12.5v-448.1c0-6.9,5.6-12.5,12.5-12.5h762c6.9,0,12.5,5.6,12.5,12.5V630.05z"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- [SECTION: projects] -->
+    <section id="projects" class="relative z-10 max-w-7xl mx-auto px-8">
+      <div class="flex items-end justify-between mb-12">
+        <div class="space-y-4">
+          <div class="flex items-center gap-2">
+            <span class="w-12 h-[1px] bg-primary shadow-[0_0_8px_rgba(59,130,246,0.8)]"></span>
+            <span class="text-primary font-bold uppercase tracking-[0.2em] text-sm drop-shadow-[0_0_5px_rgba(59,130,246,0.5)]">Portfolio Showcase</span>
+          </div>
+          <h2 class="font-display text-4xl lg:text-5xl font-black">
+            Featured
+            <span class="text-primary drop-shadow-[0_0_10px_rgba(59,130,246,0.4)]">Projects</span>
+          </h2>
+        </div>
+
+        <div class="flex gap-3 sm:gap-4">
+          <button class="glass-panel w-12 h-12 rounded-full flex items-center justify-center hover:bg-primary transition-all hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]" data-carousel-prev>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-white">
+              <path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <button class="glass-panel w-12 h-12 rounded-full flex items-center justify-center hover:bg-primary transition-all hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]" data-carousel-next>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-white">
+              <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="project-carousel flex gap-6 hide-scrollbar pb-12 snap-x snap-mandatory overflow-hidden" data-carousel-container="projects">
+        <!-- [CONT: project] -->
+        <div class="project-card bg-slate-50 border border-slate-200/60 rounded-2xl cursor-pointer flex-shrink-0 snap-start transition-all hover:border-primary/30 shadow-[0_18px_45px_rgba(15,23,42,0.16)] hover:shadow-[0_24px_60px_rgba(15,23,42,0.24)] group">
+          <div class="overflow-hidden rounded-t-2xl">
+            <img src="media/statics/nea.jpeg" alt="Project 1" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-semibold text-base tracking-tight text-slate-900 group-hover:text-primary transition-colors">Trading Academy Website</h3>
+            <p class="text-xs leading-relaxed text-slate-500 mt-3">
+              Custom-built platform for coaching, featuring course listings, student testimonials, and secure payment processing.
+            </p>
+          </div>
+        </div>
+        <!-- [CONT: project] -->
+        <div class="project-card bg-slate-50 border border-slate-200/60 rounded-2xl cursor-pointer flex-shrink-0 snap-start transition-all hover:border-primary/30 shadow-[0_18px_45px_rgba(15,23,42,0.16)] hover:shadow-[0_24px_60px_rgba(15,23,42,0.24)] group">
+          <div class="overflow-hidden rounded-t-2xl">
+            <img src="media/statics/p002.png" alt="Project 1" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-semibold text-base tracking-tight text-slate-900 group-hover:text-primary transition-colors">Custom Market Watch</h3>
+            <p class="text-xs leading-relaxed text-slate-500 mt-3">
+              Custom-built platform for coaching, featuring course listings, student testimonials, and secure payment processing.
+            </p>
+          </div>
+        </div>
+        <!-- [CONT: project] -->
+        <div class="project-card bg-slate-50 border border-slate-200/60 rounded-2xl cursor-pointer flex-shrink-0 snap-start transition-all hover:border-primary/30 shadow-[0_18px_45px_rgba(15,23,42,0.16)] hover:shadow-[0_24px_60px_rgba(15,23,42,0.24)] group">
+          <div class="overflow-hidden rounded-t-2xl">
+            <img src="media/statics/p003.png" alt="Project 1" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-semibold text-base tracking-tight text-slate-900 group-hover:text-primary transition-colors">Risk Management Calculator</h3>
+            <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-400 mt-3">
+              Custom-built platform for coaching, featuring course listings, student testimonials, and secure payment processing.
+            </p>
+          </div>
+        </div>
+        <!-- [CONT: project] -->
+        <div class="project-card bg-slate-50 border border-slate-200/60 rounded-2xl cursor-pointer flex-shrink-0 snap-start transition-all hover:border-primary/30 shadow-[0_18px_45px_rgba(15,23,42,0.16)] hover:shadow-[0_24px_60px_rgba(15,23,42,0.24)] group">
+          <div class="overflow-hidden rounded-t-2xl">
+            <img src="media/statics/nea.jpeg" alt="Project 4" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-semibold text-base tracking-tight text-slate-900 group-hover:text-primary transition-colors">Custom Payment Link</h3>
+            <p class="text-xs leading-relaxed text-slate-500 mt-3">
+              A system to send custom payment links to anyone, making you work more professional.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- [SECTION: why me] -->
+    <section id="why-me" class="relative z-10 max-w-7xl mx-auto px-8">
+      <div class="flex items-end justify-between">
+        <div class="space-y-4">
+          <h2 class="font-display text-4xl lg:text-5xl font-black">
+            Why
+            <span class="text-primary drop-shadow-[0_0_10px_rgba(59,130,246,0.4)]">
+              Me
+            </span>
+          </h2>
+        </div>
+      </div>
+ 
+      <div class="flex gap-6 hide-scrollbar pb-12 -mx-4 px-4 snap-x snap-mandatory">
+        <div class="flex flex-col lg:flex-row items-center gap-8 min-w-full lg:min-w-0">
+          <blockquote class="text-black font-bold leading-relaxed flex-1 relative">
+            <span class="text-primary text-6xl font-serif absolute -top-4 -left-2">"</span>
+            <span class="pl-8 text-2xl">I don't just build websites; I engineer high-performance platforms designed to dominate your market. By combining advanced UX architecture with persuasive brand positioning, I turn standard traffic into loyal, paying communities. From custom online academies to secure, automated payment infrastructure, I provide the end-to-end technical foundation you need to win trust, scale your margins, and consistently convert.</span>
+            <span class="text-primary text-6xl font-serif absolute -bottom-8 right-0">"</span>
+          </blockquote>
+          <img src="media/statics/blueprints.png" alt="Blueprints" class="w-96 h-auto rounded-lg flex-shrink-0">
+        </div>
+      </div>
+ 
+    </section>
+
+    <!-- [SECTION: testimonials] -->
+    <section id="testimonials" class="relative z-10 max-w-7xl mx-auto px-8">
+      <div class="flex items-end justify-between mb-8">
+        <div class="space-y-4">
+          <h2 class="font-display text-4xl lg:text-5xl font-black">
+            Testimonials
+          </h2>
+        </div>
+
+        <div class="flex gap-4">
+          <button class="glass-panel w-12 h-12 rounded-full flex items-center justify-center hover:bg-primary transition-all hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]" data-testimonial-prev aria-label="Previous testimonial">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-white">
+              <path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <button class="glass-panel w-12 h-12 rounded-full flex items-center justify-center hover:bg-primary transition-all hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]" data-testimonial-next aria-label="Next testimonial">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-white">
+              <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+      </div>
+ 
+      <div class="flex gap-6 hide-scrollbar pb-12 -mx-4 px-4 snap-x snap-mandatory" data-testimonial-list>
+        <!-- [SUB-SECTION: testimonial card] -->
+        <div class="cursor-pointer relative h-80 flex flex-1 rounded-2xl transition-all hover:border-primary/30 shadow-[0_30px_80px_rgba(15,23,42,0.25)] hover:shadow-[0_36px_90px_rgba(15,23,42,0.28)]" data-testimonial-main>
+          <div class="flex flex-row gap-4 absolute inset-0 rounded-2xl p-6">
+            <div class="h-full relative w-56 rounded-2xl overflow-hidden transition-all hover:border-primary/30 shadow-[0_30px_80px_rgba(15,23,42,0.25)] hover:shadow-[0_36px_90px_rgba(15,23,42,0.28)]">
+              <img src="media/statics/kabba.jpg" alt="Testimonial avatar" class="h-full w-full object-cover" data-testimonial-main-image />
+            </div>
+            <div class="flex flex-col h-full flex-1 justify-between items-center py-4 text-xl">
+              <p data-testimonial-main-quote>Had him build our trading academy website and the results were top tier. Clean, professional, and easy for students to navigate. The site looks so good it almost teaches people how to trade by itself. Solid Dev fr </p>
+              <div class="flex flex-col gap-2 w-full">
+                <div>
+                  <p class="font-bold" data-testimonial-main-name>Kabbafx</p>
+                  <p class="text-xs font-bold" data-testimonial-main-title>Nobile Elite Axis Capital Founder</p>
+                </div>
+                <div class="flex flex-row w-full gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-[34px] w-[34px] text-yellow-300 drop-shadow-[1px_1px_1px_black]">
+                    <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-[34px] w-[34px] text-yellow-300 drop-shadow-[1px_1px_1px_black]">
+                    <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-[34px] w-[34px] text-yellow-300 drop-shadow-[1px_1px_1px_black]">
+                    <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-[34px] w-[34px] text-yellow-300 drop-shadow-[1px_1px_1px_black]">
+                    <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-[34px] w-[34px] text-yellow-300 drop-shadow-[1px_1px_1px_black]">
+                    <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- [SUB-SECTION: testimonial] -->
+        <div class="cursor-pointer relative h-80 w-64 rounded-2xl overflow-hidden transition-all hover:border-primary/30 shadow-[0_30px_80px_rgba(15,23,42,0.25)] hover:shadow-[0_36px_90px_rgba(15,23,42,0.28)]" data-testimonial-card data-testimonial-name="Polycarp Mutua" data-testimonial-title="Bingwa Sokoni Merchant | Gold Trader" data-testimonial-quote="He brought clarity to the whole build and turned the idea into something that feels polished, fast, and ready for clients." data-testimonial-image="media/statics/polycarp.jpg">
+          <img src="media/statics/pfp.png" alt="Testimonial avatar" class="h-full w-full object-cover" data-testimonial-card-image />
+          <div class="absolute inset-0 rounded-2xl bg-slate-950/20"></div>
+          <div class="absolute bottom-4 left-4 right-4 text-white" style="text-shadow: 0 2px 15px rgba(0,0,0,0.55);">
+            <p class="font-display text-2xl font-semibold" data-testimonial-card-name>Polycarp</p>
+            <p class="mt-2 text-xs leading-relaxed text-slate-100/85" data-testimonial-card-title>Bingwa Sokoni Merchant | Gold Trader</p>
+          </div>
+        </div>
+        <!-- [SUB-SECTION: testimonial] -->
+        <div class="cursor-pointer relative h-80 w-64 rounded-2xl overflow-hidden transition-all hover:border-primary/30 shadow-[0_30px_80px_rgba(15,23,42,0.25)] hover:shadow-[0_36px_90px_rgba(15,23,42,0.28)]" data-testimonial-card data-testimonial-name="Abby" data-testimonial-title="Day Trader" data-testimonial-quote="Had him build my trading portfolio and I can't lie, the man snapped. Clean design, smooth experience, and now my portfolio looks richer than my last winning trade. Solid work all around." data-testimonial-image="media/statics/abby.jpg">
+          <img src="media/statics/abby.jpg" alt="Testimonial avatar" class="h-full w-full object-cover" data-testimonial-card-image />
+          <div class="absolute inset-0 rounded-2xl bg-slate-950/20"></div>
+          <div class="absolute bottom-4 left-4 right-4 text-white" style="text-shadow: 0 2px 15px rgba(0,0,0,0.55);">
+            <p class="font-display text-2xl font-semibold" data-testimonial-card-name>Abby</p>
+            <p class="mt-2 text-xs leading-relaxed text-slate-100/85" data-testimonial-card-title>Day Trader</p>
+          </div>
+        </div>
+      </div>
+ 
+    </section>
+
+    <!-- [SECTION: contact me] -->
+    <section id="contact" class="relative z-10 max-w-7xl mx-auto px-8">
+      <div class="flex items-end justify-between mb-12">
+        <div class="space-y-4">
+          <h2 class="font-display text-4xl lg:text-5xl font-black">
+            Contact
+            <span class="text-primary drop-shadow-[0_0_10px_rgba(59,130,246,0.4)]">Me</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="flex gap-6 hide-scrollbar pb-12 -mx-4 px-4 snap-x snap-mandatory overflow-x-auto">
+
+        <!-- item -->
+        <div class=" overflow-visible relative h-80 w-full flex gap-6">
+
+          <div class="flex-1 rounded-xl bg-white shadow-[0_30px_80px_rgba(15,23,42,0.25)] hover:shadow-[0_36px_90px_rgba(15,23,42,0.28)] transition-all flex items-stretch overflow-hidden">
+          
+            <img src="media/statics/sidePic.png" class="h-full w-auto object-cover flex-shrink-0"/>
+          
+            <div class="flex flex-col flex-1 p-6 h-full justify-center items-center text-center">
+              <p>Kindly use the designated form to reach me when necessary, and include the most suitable way for me to respond; if you prefer social media, check the links below.</p>
+              <br>
+              <p>For urgent matters, you may call me directly on my business number: <span class="text-primary font-bold">+254719177007</span>.</p>
+              <br>
+              <p>You are also welcome to follow me.</p>
+            </div>
+          
+          </div>         
+
+          <div data-contact-form-wrapper class="p-6 flex-1 rounded-xl bg-white shadow-[0_30px_80px_rgba(15,23,42,0.25)] hover:shadow-[0_36px_90px_rgba(15,23,42,0.28)] transition-all">
+            <form class="h-full flex flex-col gap-4" id="contactForm">
+              <input type="text" name="subject" id="contactSubject" placeholder="Subject" class="w-full p-4 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary" required />
+              <textarea name="message" id="contactMessage" placeholder="Message" class="flex-1 w-full p-4 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary resize-none" required></textarea>
+              <button type="submit" id="sendEmailBtn" class="w-full p-4 bg-primary hover:bg-blue-600 rounded-2xl cursor-pointer text-white text-2xl font-semibold transition-all">
+                Send
+              </button>
+            </form>
+          </div>
+        
+        </div>
+      
+      </div>     
+    </section>
+
+    <!-- [SECTION: footer] -->
+    <footer class="relative z-10 max-w-7xl mx-auto px-8 mb-36 h-12">
+      <div class="flex flex-row justify-between items-center h-full gap-6">
+        <div class="flex flex-row h-full w-8 items-center gap-0">
+          <a href="https://www.instagram.com/qahnaxy/" target="_blank" rel="noopener" class="group h-full p-2 inline-block transition-transform duration-300 hover:scale-110 hover:text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32 class="font-bla">
+              <path fill="currentColor" d="M10.202,2.098c-1.49,.07-2.507,.308-3.396,.657-.92,.359-1.7,.84-2.477,1.619-.776,.779-1.254,1.56-1.61,2.481-.345,.891-.578,1.909-.644,3.4-.066,1.49-.08,1.97-.073,5.771s.024,4.278,.096,5.772c.071,1.489,.308,2.506,.657,3.396,.359,.92,.84,1.7,1.619,2.477,.779,.776,1.559,1.253,2.483,1.61,.89,.344,1.909,.579,3.399,.644,1.49,.065,1.97,.08,5.771,.073,3.801-.007,4.279-.024,5.773-.095s2.505-.309,3.395-.657c.92-.36,1.701-.84,2.477-1.62s1.254-1.561,1.609-2.483c.345-.89,.579-1.909,.644-3.398,.065-1.494,.081-1.971,.073-5.773s-.024-4.278-.095-5.771-.308-2.507-.657-3.397c-.36-.92-.84-1.7-1.619-2.477s-1.561-1.254-2.483-1.609c-.891-.345-1.909-.58-3.399-.644s-1.97-.081-5.772-.074-4.278,.024-5.771,.096m.164,25.309c-1.365-.059-2.106-.286-2.6-.476-.654-.252-1.12-.557-1.612-1.044s-.795-.955-1.05-1.608c-.192-.494-.423-1.234-.487-2.599-.069-1.475-.084-1.918-.092-5.656s.006-4.18,.071-5.656c.058-1.364,.286-2.106,.476-2.6,.252-.655,.556-1.12,1.044-1.612s.955-.795,1.608-1.05c.493-.193,1.234-.422,2.598-.487,1.476-.07,1.919-.084,5.656-.092,3.737-.008,4.181,.006,5.658,.071,1.364,.059,2.106,.285,2.599,.476,.654,.252,1.12,.555,1.612,1.044s.795,.954,1.051,1.609c.193,.492,.422,1.232,.486,2.597,.07,1.476,.086,1.919,.093,5.656,.007,3.737-.006,4.181-.071,5.656-.06,1.365-.286,2.106-.476,2.601-.252,.654-.556,1.12-1.045,1.612s-.955,.795-1.608,1.05c-.493,.192-1.234,.422-2.597,.487-1.476,.069-1.919,.084-5.657,.092s-4.18-.007-5.656-.071M21.779,8.517c.002,.928,.755,1.679,1.683,1.677s1.679-.755,1.677-1.683c-.002-.928-.755-1.679-1.683-1.677,0,0,0,0,0,0-.928,.002-1.678,.755-1.677,1.683m-12.967,7.496c.008,3.97,3.232,7.182,7.202,7.174s7.183-3.232,7.176-7.202c-.008-3.97-3.233-7.183-7.203-7.175s-7.182,3.233-7.174,7.203m2.522-.005c-.005-2.577,2.08-4.671,4.658-4.676,2.577-.005,4.671,2.08,4.676,4.658,.005,2.577-2.08,4.671-4.658,4.676-2.577,.005-4.671-2.079-4.676-4.656h0"></path>
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@qahnaxy" target="_blank" rel="noopener" class="group h-full p-2 inline-block transition-transform duration-300 hover:scale-110 hover:text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <path fill="currentColor" d="M24.562,7.613c-1.508-.983-2.597-2.557-2.936-4.391-.073-.396-.114-.804-.114-1.221h-4.814l-.008,19.292c-.081,2.16-1.859,3.894-4.039,3.894-.677,0-1.315-.169-1.877-.465-1.288-.678-2.169-2.028-2.169-3.582,0-2.231,1.815-4.047,4.046-4.047,.417,0,.816,.069,1.194,.187v-4.914c-.391-.053-.788-.087-1.194-.087-4.886,0-8.86,3.975-8.86,8.86,0,2.998,1.498,5.65,3.783,7.254,1.439,1.01,3.19,1.606,5.078,1.606,4.886,0,8.86-3.975,8.86-8.86V11.357c1.888,1.355,4.201,2.154,6.697,2.154v-4.814c-1.345,0-2.597-.4-3.647-1.085Z"></path>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61586033213883" target="_blank" rel="noopener" class="group h-full p-2 inline-block transition-transform duration-300 hover:scale-110 hover:text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <path fill="currentColor" d="M16,2c-7.732,0-14,6.268-14,14,0,6.566,4.52,12.075,10.618,13.588v-9.31h-2.887v-4.278h2.887v-1.843c0-4.765,2.156-6.974,6.835-6.974,.887,0,2.417,.174,3.043,.348v3.878c-.33-.035-.904-.052-1.617-.052-2.296,0-3.183,.87-3.183,3.13v1.513h4.573l-.786,4.278h-3.787v9.619c6.932-.837,12.304-6.74,12.304-13.897,0-7.732-6.268-14-14-14Z"></path>
+            </svg>
+          </a>
+          <a href="https://x.com/qahnaxy" target="_blank" rel="noopener" class="group h-full p-2 inline-block transition-transform duration-300 hover:scale-110 hover:text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <path fill="currentColor" d="M18.42,14.009L27.891,3h-2.244l-8.224,9.559L10.855,3H3.28l9.932,14.455L3.28,29h2.244l8.684-10.095,6.936,10.095h7.576l-10.301-14.991h0Zm-3.074,3.573l-1.006-1.439L6.333,4.69h3.447l6.462,9.243,1.006,1.439,8.4,12.015h-3.447l-6.854-9.804h0Z"></path>
+            </svg>
+          </a>
+          <a href="https://www.twitch.tv/qahnaxy" target="_blank" rel="noopener" class="group h-full p-2 inline-block transition-transform duration-300 hover:scale-110 hover:text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <path fill="currentColor" d="M8.5,2L3.143,7.357V26.643h6.429v5.357l5.357-5.357h4.286l9.643-9.643V2H8.5ZM26.714,15.929l-4.286,4.286h-4.286l-3.75,3.75v-3.75h-4.821V4.143H26.714V15.929Z"></path>
+              <path fill="currentColor" d="M21.357 7.893H23.5V14.322H21.357z"></path>
+              <path fill="currentColor" d="M15.464 7.893H17.607V14.322H15.464z"></path>
+            </svg>
+          </a>
+          <a href="" target="_blank" rel="noopener" class="group h-full p-2 inline-block transition-transform duration-300 hover:scale-110 hover:text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <path fill="currentColor" d="M26.413,6.536c-1.971-.902-4.052-1.543-6.189-1.904-.292,.523-.557,1.061-.793,1.612-2.277-.343-4.592-.343-6.869,0-.236-.551-.5-1.089-.793-1.612-2.139,.365-4.221,1.006-6.194,1.909C1.658,12.336,.596,17.987,1.127,23.558h0c2.294,1.695,4.861,2.984,7.591,3.811,.615-.827,1.158-1.704,1.626-2.622-.888-.332-1.744-.741-2.56-1.222,.215-.156,.425-.316,.628-.472,4.806,2.26,10.37,2.26,15.177,0,.205,.168,.415,.328,.628,.472-.817,.483-1.676,.892-2.565,1.225,.467,.918,1.011,1.794,1.626,2.619,2.732-.824,5.301-2.112,7.596-3.808h0c.623-6.461-1.064-12.06-4.46-17.025Zm-15.396,13.596c-1.479,0-2.702-1.343-2.702-2.994s1.18-3.006,2.697-3.006,2.73,1.354,2.704,3.006-1.192,2.994-2.699,2.994Zm9.967,0c-1.482,0-2.699-1.343-2.699-2.994s1.18-3.006,2.699-3.006,2.723,1.354,2.697,3.006-1.189,2.994-2.697,2.994Z"></path>
+            </svg>
+          </a>
+          <a href="" target="_blank" rel="noopener" class="group h-full p-2 inline-block transition-transform duration-300 hover:scale-110 hover:text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <path fill="currentColor" d="M31.331,8.248c-.368-1.386-1.452-2.477-2.829-2.848-2.496-.673-12.502-.673-12.502-.673,0,0-10.007,0-12.502,.673-1.377,.37-2.461,1.462-2.829,2.848-.669,2.512-.669,7.752-.669,7.752,0,0,0,5.241,.669,7.752,.368,1.386,1.452,2.477,2.829,2.847,2.496,.673,12.502,.673,12.502,.673,0,0,10.007,0,12.502-.673,1.377-.37,2.461-1.462,2.829-2.847,.669-2.512,.669-7.752,.669-7.752,0,0,0-5.24-.669-7.752ZM12.727,20.758V11.242l8.364,4.758-8.364,4.758Z"></path>
+            </svg>
+          </a>
+          <a href="https://t.me/qahnaxy" target="_blank" rel="noopener" class="group h-full p-2 inline-block transition-transform duration-300 hover:scale-110 hover:text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <path fill="currentColor" d="M16,2c-7.732,0-14,6.268-14,14s6.268,14,14,14,14-6.268,14-14S23.732,2,16,2Zm6.489,9.521c-.211,2.214-1.122,7.586-1.586,10.065-.196,1.049-.583,1.401-.957,1.435-.813,.075-1.43-.537-2.218-1.053-1.232-.808-1.928-1.311-3.124-2.099-1.382-.911-.486-1.412,.302-2.23,.206-.214,3.788-3.472,3.858-3.768,.009-.037,.017-.175-.065-.248-.082-.073-.203-.048-.29-.028-.124,.028-2.092,1.329-5.905,3.903-.559,.384-1.065,.571-1.518,.561-.5-.011-1.461-.283-2.176-.515-.877-.285-1.574-.436-1.513-.92,.032-.252,.379-.51,1.042-.773,4.081-1.778,6.803-2.95,8.164-3.517,3.888-1.617,4.696-1.898,5.222-1.907,.116-.002,.375,.027,.543,.163,.142,.115,.181,.27,.199,.379,.019,.109,.042,.357,.023,.551Z" fill-rule="evenodd"></path>
+            </svg>
+          </a>
+          <a href="" target="_blank" rel="noopener" class="group h-full p-2 inline-block transition-transform duration-300 hover:scale-110 hover:text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <path fill="currentColor" d="M28.783,10.412c-.005-3.575-2.789-6.505-6.056-7.563-4.057-1.313-9.407-1.123-13.281,.705C4.75,5.77,3.275,10.623,3.22,15.464c-.045,3.98,.352,14.461,6.264,14.536,4.393,.056,5.047-5.605,7.08-8.331,1.446-1.94,3.308-2.487,5.6-3.055,3.939-.975,6.624-4.084,6.619-8.203Z"></path>
+            </svg>
+          </a>
+        </div>
+  
+        <div>
+          <p class="text-sm">Site made with <span id="loveEmoji">💙</span> by me
+          <br>
+          Special thanks: VivekMorgan</p>
+        </div>
+      </div>     
+    </footer>
+
+    <!-- [SECTION: bottom nav]-->
+    <nav class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
+      <div class="glass-panel px-4 py-3 rounded-3xl flex items-center gap-2 shadow-2xl border-white/5">
+        <a class="bottom-nav-link is-active flex flex-col items-center justify-center w-16 h-16 rounded-2xl transition-all" href="#home" data-nav-link aria-current="page">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+          </svg>
+          <span class="text-[10px] font-bold mt-1">Home</span>
+        </a>
+
+        <a class="bottom-nav-link flex flex-col items-center justify-center w-16 h-16 rounded-2xl transition-all group" href="#projects" data-nav-link>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 transition-colors">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+          </svg>
+          <span class="text-[10px] font-bold mt-1">Projects</span>
+        </a>
+
+        <a class="bottom-nav-link flex flex-col items-center justify-center w-16 h-16 rounded-2xl transition-all group" href="#why-me" data-nav-link>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 transition-colors">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+          </svg>
+          <span class="text-[10px] font-bold mt-1">Why Me</span>
+        </a>
+
+        <a class="bottom-nav-link flex flex-col items-center justify-center w-16 h-16 rounded-2xl transition-all group" href="#testimonials" data-nav-link>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 transition-colors">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+          </svg>
+          <span class="text-[10px] font-bold mt-1">Ratings</span>
+        </a>
+
+        <a class="bottom-nav-link flex flex-col items-center justify-center w-16 h-16 rounded-2xl transition-all group" href="#contact" data-nav-link>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 transition-colors">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 0 1 1.037-.443 48.282 48.282 0 0 0 5.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+          </svg>
+          <span class="text-[10px] font-bold mt-1">Contact</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- [POPUP: coming soon] -->
+    <div class="coming-soon-modal" data-coming-soon-modal aria-hidden="true">
+      <div class="coming-soon-modal__backdrop" data-coming-soon-close></div>
+      <section class="coming-soon-modal__dialog" role="dialog" aria-modal="true" aria-label="Coming s oon">
+        <button class="coming-soon-modal__close" type="button" data-coming-soon-close aria-label="Close coming soon popup">
+          <span class="material-symbols-outlined" aria-hidden="true">close</span>
+        </button>
+        <main class="flex min-h-[min(72vh,30rem)] w-full flex-col items-center justify-center px-6 py-8 text-center">
+          <img src="media/gifs/coderCat.gif" alt="Coming soon" class="max-h-[18rem] w-auto max-w-full rounded-2xl object-contain sm:max-h-[20rem]" />
+          <h2 class="mt-4 font-display text-4xl font-black leading-none tracking-normal text-slate-900 sm:text-5xl">COMING S<span class="text-primary">OO</span>N</h2>
+          <p class="mt-3 max-w-[26rem] text-sm leading-6 text-slate-600 sm:text-base">The blog is still compiling. Please pretend this was a very intentional suspense feature.</p>
+        </main>
+      </section>
+    </div>
+
+    <!-- [POPUP: coaching] -->
+    <div class="coming-soon-modal" data-coaching-modal aria-hidden="true">
+      <div class="coming-soon-modal__backdrop" data-coaching-modal-close></div>
+      <section class="coming-soon-modal__dialog !h-[28rem] !min-h-[28rem] !w-full !max-w-3xl p-6 pt-20 flex flex-col gap-6" role="dialog" aria-modal="true" aria-label="1on1 Coaching">
+        <button class="coming-soon-modal__close" type="button" data-coaching-modal-close aria-label="Close coaching popup">
+          <span class="material-symbols-outlined" aria-hidden="true">close</span>
+        </button>
+        <div class="pointer-events-none absolute left-0 top-0 h-full w-1/2 bg-left bg-no-repeat bg-contain" style="background-image: url('media/statics/coaching.png');"></div>
+        <div class="relative z-10 w-full flex items-center justify-center ml-12">
+          <p class="text-6xl sm:text-7xl font-black text-slate-900"><span class="text-primary">1on1</span> COACHING</p>
+        </div>
+        <div class="ml-64 flex flex-row items-center justify-center text-lg sm:text-xl">
+          <div class="font-bold">
+            <p>Tailwind CSS</p>
+          </div>
+          <div class="bg-primary p-1 rounded-2xl px-6 ml-4">
+            <p>$0400 (2mo)</p>
+          </div>
+        </div>
+        <div class="ml-56 flex flex-row items-center justify-center text-lg sm:text-xl">
+          <div class="font-bold">
+            <p>System Design</p>
+          </div>
+          <div class="bg-primary p-1 rounded-2xl px-6 ml-4">
+            <p>$1000 (3mo)</p>
+          </div>
+        </div>
+        <div class="ml-48 flex flex-row items-center justify-center text-lg sm:text-xl">
+          <div class="font-bold">
+            <p>Advanced PHP</p>
+          </div>
+          <div class="bg-primary p-1 rounded-2xl px-6 ml-4">
+            <p>$1900 (4mo)</p>
+          </div>
+        </div>
+        <div class="ml-44 flex flex-row items-center justify-center text-lg sm:text-xl">
+          <div class="font-bold">
+            <p>FreeLancing</p>
+          </div>
+          <div class="bg-primary p-1 rounded-2xl px-6 ml-4">
+            <p>$2150 (2mo)</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- [SECTION: interaction scripts]-->
+    <script src="js/contactMeAnimation.js"></script>
+    <script src="js/contactScroll.js"></script>
+    <script src="js/bottomNav.js"></script>
+    <script src="js/projectCarousel.js"></script>
+    <script src="js/testimonialCarousel.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js" defer></script>
+    <script src="js/contactEmail.js" defer></script>
+    <script src="js/loveEmojiAnimation.js"></script>
+    <script src="js/nairobiTime.js"></script>
+    <script src="js/starShine.js"></script>
+    <script src="js/comingSoonModal.js"></script>
+    <script src="js/oneko.js"></script>
+  </body>
+</html>

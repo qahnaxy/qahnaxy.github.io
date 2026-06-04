@@ -1,0 +1,407 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply overflow-x-hidden;
+  }
+}
+
+.nebula {
+  background: radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 80% 70%, rgba(37, 99, 235, 0.1) 0%, transparent 50%);
+}
+
+.star-field {
+  background-image: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px);
+  background-size: 550px 550px;
+}
+
+.glass-panel {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.deep-glass-panel {
+  background: rgba(2, 6, 23, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.project-carousel {
+  overflow-x: auto;
+  scroll-padding-left: 0;
+  scroll-snap-type: x mandatory;
+}
+
+.project-card {
+  flex-basis: 100%;
+  max-width: 100%;
+  min-width: 0;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+@media (min-width: 768px) {
+  .project-card {
+    flex-basis: calc((100% - 1.5rem) / 2);
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-card {
+    flex-basis: calc((100% - 3rem) / 3);
+  }
+}
+
+.glowing-border {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3), inset 0 0 10px rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.glowing-border:hover {
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.5), inset 0 0 15px rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.8);
+}
+
+.pill-glow {
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+}
+
+@media (max-width: 767px) {
+  :root {
+    --page-scale: 1;
+  }
+
+  html {
+    scroll-padding-top: 1rem;
+  }
+
+  body {
+    padding-bottom: 7rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 1rem;
+    padding: 1rem !important;
+  }
+
+  header > div:first-child {
+    text-align: center;
+    font-size: 1.65rem !important;
+  }
+
+  header > div:last-child {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem !important;
+    width: 100%;
+  }
+
+  header > div:last-child > * {
+    display: flex;
+    min-height: 2.65rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 0.5rem !important;
+    text-align: center;
+    font-size: 0.72rem !important;
+    line-height: 1.1;
+  }
+
+  #home,
+  #projects,
+  #why-me,
+  #testimonials,
+  #contact,
+  footer {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  #home {
+    padding-top: 1.5rem !important;
+    gap: 3rem !important;
+  }
+
+  #home h1 {
+    font-size: clamp(2.55rem, 13vw, 3.4rem) !important;
+    line-height: 0.98 !important;
+  }
+
+  #home p {
+    font-size: 1rem !important;
+  }
+
+  #home .contact-me-button,
+  #home a[href="#why-me"] {
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+  }
+
+  #home > div:last-child {
+    width: 100%;
+    overflow: visible;
+  }
+
+  #home > div:last-child > .relative {
+    width: min(100%, 21rem);
+    margin-inline: auto;
+  }
+
+  #home .bg-blue-200 {
+    width: min(72vw, 17rem) !important;
+  }
+
+  #home .border-\[12px\] {
+    border-width: 0.55rem !important;
+    border-radius: 2rem !important;
+  }
+
+  #home .absolute.-left-12 {
+    left: -0.35rem !important;
+    top: 1rem !important;
+    width: 10rem !important;
+    padding: 0.9rem !important;
+  }
+
+  #home .absolute.-right-6 {
+    right: 0.15rem !important;
+    top: 42% !important;
+  }
+
+  #home .absolute.-bottom-6 {
+    bottom: -2.25rem !important;
+    min-width: 0 !important;
+    width: min(92vw, 18.5rem);
+    gap: 0.65rem !important;
+  }
+
+  #home .absolute.-bottom-6 svg {
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+  }
+
+  section {
+    margin-top: 4.5rem;
+  }
+
+  #projects > div:first-child,
+  #testimonials > div:first-child,
+  #contact > div:first-child {
+    align-items: flex-start !important;
+    gap: 1rem;
+  }
+
+  #projects h2,
+  #why-me h2,
+  #testimonials h2,
+  #contact h2 {
+    font-size: 2.45rem !important;
+    line-height: 1;
+  }
+
+  #projects [data-carousel-prev],
+  #projects [data-carousel-next],
+  #testimonials [data-testimonial-prev],
+  #testimonials [data-testimonial-next] {
+    width: 2.75rem !important;
+    height: 2.75rem !important;
+    flex-shrink: 0;
+  }
+
+  .project-carousel {
+    padding-bottom: 2.5rem !important;
+  }
+
+  .project-card {
+    border-radius: 1.15rem !important;
+  }
+
+  .project-card img {
+    height: 13.5rem !important;
+  }
+
+  #why-me .hide-scrollbar {
+    margin-inline: 0 !important;
+    padding-inline: 0 !important;
+  }
+
+  #why-me blockquote {
+    font-size: 1rem;
+  }
+
+  #why-me blockquote span:nth-child(2) {
+    display: block;
+    padding-left: 1.4rem !important;
+    font-size: 1.25rem !important;
+    line-height: 1.5 !important;
+  }
+
+  #why-me img {
+    width: min(100%, 18rem) !important;
+  }
+
+  #testimonials > div[data-testimonial-list] {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem !important;
+    margin-inline: 0 !important;
+    padding-inline: 0 !important;
+    overflow: visible !important;
+  }
+
+  [data-testimonial-main] {
+    grid-column: 1 / -1;
+    height: auto !important;
+    min-height: 0;
+    flex: none !important;
+    overflow: hidden;
+    background: #ffffff;
+  }
+
+  [data-testimonial-main] > div {
+    position: relative !important;
+    inset: auto !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+    padding: 1rem !important;
+  }
+
+  [data-testimonial-main] > div > div:first-child {
+    width: 100% !important;
+    height: 13rem !important;
+  }
+
+  [data-testimonial-main] > div > div:last-child {
+    gap: 1rem;
+    align-items: flex-start !important;
+    padding-block: 0 !important;
+    font-size: 1rem !important;
+    line-height: 1.55;
+  }
+
+  [data-testimonial-main] svg {
+    width: 1.45rem !important;
+    height: 1.45rem !important;
+  }
+
+  [data-testimonial-card] {
+    width: auto !important;
+    height: 12.5rem !important;
+  }
+
+  [data-testimonial-card] [data-testimonial-card-name] {
+    font-size: 1.15rem !important;
+  }
+
+  #contact > .hide-scrollbar {
+    margin-inline: 0 !important;
+    padding-inline: 0 !important;
+    overflow: visible !important;
+  }
+
+  #contact > .hide-scrollbar > div {
+    height: auto !important;
+    width: 100% !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+
+  #contact > .hide-scrollbar > div > div {
+    width: 100%;
+    flex: none !important;
+  }
+
+  #contact img[src*="sidePic"] {
+    width: 7.5rem !important;
+    min-height: 100%;
+    object-fit: cover;
+  }
+
+  #contact [data-contact-form-wrapper] {
+    min-height: 21rem;
+  }
+
+  footer {
+    height: auto !important;
+    margin-bottom: 2rem !important;
+  }
+
+  footer > div {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  footer > div > div:first-child {
+    width: 100% !important;
+    height: auto !important;
+    flex-wrap: wrap;
+    gap: 0.35rem !important;
+  }
+
+  footer a {
+    height: 2.8rem !important;
+  }
+
+  nav.fixed {
+    bottom: 0.75rem !important;
+    width: calc(100% - 1rem);
+  }
+
+  nav.fixed > div {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.15rem !important;
+    padding: 0.45rem !important;
+    border-radius: 1.35rem !important;
+  }
+
+  nav.fixed a {
+    width: 3.25rem !important;
+    height: 3.25rem !important;
+    border-radius: 1rem !important;
+  }
+
+  nav.fixed svg {
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+  }
+
+  nav.fixed span {
+    font-size: 0.58rem !important;
+  }
+}
+
+@media (max-width: 420px) {
+  header > div:last-child {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #nairobiTime {
+    grid-column: 1 / -1;
+  }
+
+  #contact .flex.items-stretch {
+    flex-direction: column;
+  }
+
+  #contact img[src*="sidePic"] {
+    width: 100% !important;
+    height: 10rem !important;
+  }
+}

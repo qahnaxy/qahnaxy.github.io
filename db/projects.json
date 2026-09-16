@@ -1,0 +1,38 @@
+[
+  {
+    "id": "project-4",
+    "title": "Risk Management Calculator",
+    "description": "Trading risk management calculator designed to help traders calculate position sizes, risk exposure, stop loss levels, and potential losses.",
+    "image": "media/static/rmc.png"
+  },
+  {
+    "id": "project-5",
+    "title": "1 on 1 Coaching System  ",
+    "description": "One on one AI coaching system that filters information for each user, delivering personalized guidance, insights, and actionable recommendations.",
+    "image": "media/static/project404.png"
+  },
+  {
+    "id": "project-6",
+    "title": "NEAFY (A fitness LLM)",
+    "description": "Fitness focused LLM designed to provide personalized training guidance, answer fitness questions, and adapt recommendations to each user.",
+    "image": "media/static/neafyBanner.png"
+  },
+  {
+    "id": "project-7",
+    "title": "KabbaFx",
+    "description": "Professional trading portfolio website showcasing Kabbafx’s expertise, services, trading journey, and educational resources..",
+    "image": "media/static/project404.png"
+  },
+  {
+    "id": "project-8",
+    "title": "MarketDunk 2",
+    "description": "Interactive trading game where players throw a basketball into the correct answer to test their trading knowledge.",
+    "image": "media/static/marketDunk.png"
+  },
+  {
+    "id": "project-9",
+    "title": "Achorex",
+    "description": "Interactive forex game where players answer trading questions and test their knowledge through an archery based challenge.",
+    "image": "media/static/achorex.png"
+  }
+]

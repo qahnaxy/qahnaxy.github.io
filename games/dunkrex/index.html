@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Trading Hoops · ARCADE</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="flex flex-col items-center justify-center gap-5 min-h-screen relative overflow-hidden bg-gradient-to-b from-slate-100 via-slate-50 to-blue-100 px-4 py-6" id="stage">
+  <!-- [SECTION: header] -->
+  <div id="stageTopBar" class="relative z-10 w-[1296px] pointer-events-none flex flex-col sm:flex-row items-center justify-between gap-3 rounded-2xl border-8 border-[#3B86F3] bg-white/75 px-5 py-3 shadow-lg shadow-blue-900/10 backdrop-blur-sm">
+    <div class="text-6xl sm:text-7xl leading-none text-[#3B86F3] drop-shadow-sm">
+      <p class="font-['Old_Sport_College']">DUN<span class="text-orange-500">K</span>REX</p>
+    </div>
+    <div class="rounded-xl border-2 border-red-500 bg-red-500/10 px-4 py-2 text-center text-xs sm:text-xl font-bold tracking-wide text-slate-700">
+      Sketch game · <span class="text-red-500">Full game</span> is available to my clients' sites and trading academies.
+    </div>
+  </div>
+
+  <div class="relative rounded-2xl border-8 border-[#3B86F3] overflow-hidden" id="gameWrap">
+    <canvas id="gameCanvas" width="1280" height="720"></canvas>
+
+    <div id="answerCards"></div>
+    <div id="hoopGlows"></div>
+
+    <div id="questionBanner" class="hidden">
+      <div class="cat"><span id="qCategory">FOREX</span> · <span id="qDifficulty">EASY</span></div>
+      <div class="q" id="qText">Loading...</div>
+      <div class="mt-1.5">
+        <span class="text-[10px] text-[#888] tracking-[2px]">TIME </span>
+        <span class="timer" id="qTimer">10</span>
+      </div>
+    </div>
+
+    <div class="arcade-hud top-4 left-4 min-w-[180px]">
+      <div class="label">SCORE</div>
+      <div class="value" id="scoreDisplay">0</div>
+    </div>
+
+    <div class="arcade-hud top-4 right-4 min-w-[180px] text-right">
+      <div class="label">STREAK</div>
+      <div class="value text-[#4a9eff] [text-shadow:0_0_15px_rgba(74,158,255,0.8)]" id="streakDisplay">0</div>
+      <div class="text-[10px] text-[#666] mt-1">BEST <span id="bestStreakDisplay" class="text-[#4a9eff]">0</span></div>
+    </div>
+
+    <div class="arcade-hud bottom-4 left-4">
+      <div class="label">SHOT</div>
+      <div class="value text-xl" id="shotDisplay">1 / 10</div>
+    </div>
+
+    <div class="arcade-hud bottom-4 right-4 text-right">
+      <div class="label">ACCURACY</div>
+      <div class="value text-xl text-[#22c55e] [text-shadow:0_0_15px_rgba(34,197,94,0.8)]" id="accuracyDisplay">0%</div>
+    </div>
+
+    <!-- TIMING BAR -->
+    <div class="timing-bar" id="timingBar">
+      <div class="timing-bar-inner">
+        <div class="green-zone"></div>
+      </div>
+      <div class="needle left-0" id="needle"></div>
+      <div class="label">GREEN = MAKE</div>
+    </div>
+
+    <div class="instruction-pill" id="instructions">
+      TAP SPACE IN THE GREEN ZONE
+    </div>
+
+    <div id="flashOverlay" class="flash-screen"></div>
+    <div id="bigPopups" class="absolute inset-0 pointer-events-none z-[120]"></div>
+
+    <div id="startScreen" class="glowing">
+      <div class="text-6xl mb-2">🏀</div>
+      <h1 class="text-[#daa74b] m-0 mb-1.5 text-[40px] tracking-[-1px] [text-shadow:0_0_30px_rgba(218,167,75,0.8)]">TRADING HOOPS</h1>
+      <p class="text-[#daa74b] m-0 mb-3 text-[13px] tracking-[4px] font-bold">A R C A D E</p>
+      <p class="text-[#aaa] m-0 mb-6 text-sm leading-[1.6]">
+        Read the trading question.<br>
+        Aim with <b class="text-[#daa74b]">mouse</b> at the correct answer's hoop.<br>
+        <b class="text-[#22c55e]">Tap SPACE</b> when the needle is in the <b class="text-[#22c55e]">GREEN ZONE</b>.<br>
+        Green = MAKE. Miss = AIR BALL.
+      </p>
+      <button id="startBtn" class="btn-primary">▶ INSERT COIN</button>
+      <p class="text-[#666] text-[11px] mt-3.5">ENTER to start</p>
+      <p class="text-[#daa74b] text-[11px] mt-[18px] tracking-[1px] opacity-[0.85]">Game made by Qahnaxy<br>Developer for Trading Influencers</p>
+    </div>
+
+    <div id="gameOverScreen" class="hidden">
+      <h1 id="goTitle" class="text-[#daa74b] m-0 mb-1.5 text-[44px] tracking-[-1px] [text-shadow:0_0_30px_rgba(218,167,75,0.8)]">GAME OVER</h1>
+      <p id="goSubtitle" class="text-[#888] m-0 mb-6 text-[13px] tracking-[3px]">FINAL STATS</p>
+      <div class="grid grid-cols-2 gap-[14px] mb-[22px]">
+        <div class="bg-[rgba(218,167,75,0.12)] p-4 rounded-xl border border-[rgba(218,167,75,0.4)]">
+          <div class="text-[#888] text-[10px] tracking-[2px]">SCORE</div>
+          <div id="goScore" class="text-[#daa74b] text-4xl font-mono font-black [text-shadow:0_0_20px_rgba(218,167,75,0.8)]">0</div>
+        </div>
+        <div class="bg-[rgba(74,158,255,0.12)] p-4 rounded-xl border border-[rgba(74,158,255,0.4)]">
+          <div class="text-[#888] text-[10px] tracking-[2px]">ACCURACY</div>
+          <div id="goAccuracy" class="text-[#4a9eff] text-4xl font-mono font-black [text-shadow:0_0_20px_rgba(74,158,255,0.8)]">0%</div>
+        </div>
+      </div>
+      <div id="goMessage" class="text-[#aaa] text-[15px] mb-[22px] font-semibold"></div>
+      <button id="playAgainBtn" class="btn-primary">▶ PLAY AGAIN</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="js/questions.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>

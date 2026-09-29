@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trading Combat · Stickman Platformer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div
+    id="stage"
+    class="flex min-h-screen flex-col items-center justify-center gap-5 bg-[#f8fafc] p-4"
+  >
+    <div
+      id="gameWrap"
+      class="rounded-2xl border-8 border-[#3B86F3] bg-[#0a0a0f] p-3 shadow-xl shadow-amber-900/10"
+    >
+      <div class="flex flex-col gap-3">
+        <!-- TOP HUD -->
+        <div class="flex justify-between gap-3">
+          <div class="panel flex flex-1 items-center gap-3 px-[18px] py-[10px]">
+            <span class="text-lg font-bold text-[#daa74b]">TEAM A</span>
+            <span id="scoreA" class="font-mono text-[22px]">0</span>
+            <span id="hpA1" class="text-xs text-[#daa74b]">A1: 100</span>
+            <span id="hpA2" class="text-xs text-[#c4953a]">A2: 100</span>
+          </div>
+          <div class="panel min-w-[180px] px-[18px] py-[10px] text-center">
+            <div class="text-[10px] tracking-[1px] text-[#888]">TURN</div>
+            <div id="turnLabel" class="text-lg font-bold text-[#daa74b]">A1</div>
+            <div id="phaseLabel" class="text-[10px] text-[#888]">READY</div>
+          </div>
+          <div class="panel flex flex-1 items-center justify-end gap-3 px-[18px] py-[10px]">
+            <span id="hpB1" class="text-xs text-[#4a9eff]">B1: 100</span>
+            <span id="hpB2" class="text-xs text-[#3a7edd]">B2: 100</span>
+            <span id="scoreB" class="font-mono text-[22px]">0</span>
+            <span class="text-lg font-bold text-[#4a9eff]">TEAM B</span>
+          </div>
+        </div>
+        <!-- CANVAS -->
+        <canvas
+          id="gameCanvas"
+          width="1000"
+          height="500"
+          class="block rounded-xl bg-[#0d0d18]"
+        ></canvas>
+        <!-- TIMER BAR -->
+        <div id="timerBar" class="panel hidden items-center gap-3 px-4 py-2">
+          <span class="text-xs text-[#888]">ACTION TIME</span>
+          <div class="h-2 flex-1 overflow-hidden rounded bg-white/10">
+            <div
+              id="timerFill"
+              class="h-full w-full bg-[#daa74b] transition-[width] duration-100 ease-linear"
+            ></div>
+          </div>
+          <span id="timerText" class="min-w-[30px] font-mono text-base text-[#daa74b]">6.0</span>
+        </div>
+        <!-- CONTROLS -->
+        <div id="controlsBox" class="panel hidden px-4 py-[10px] text-center text-[13px] text-[#aaa]">
+          <b class="text-[#daa74b]">A/D</b> move &nbsp;·&nbsp;
+          <b class="text-[#daa74b]">W</b> jump / double-jump &nbsp;·&nbsp;
+          <b class="text-[#daa74b]">S</b> drop through platform &nbsp;·&nbsp;
+          <b class="text-[#daa74b]">SPACE</b> shoot &nbsp;·&nbsp;
+          <b class="text-[#daa74b]">E</b> grab ladder
+        </div>
+        <!-- QUESTION PANEL -->
+        <div id="questionBox" class="panel hidden p-5">
+          <div class="mb-3 flex justify-between">
+            <div class="flex items-center gap-2">
+              <span
+                id="qCategory"
+                class="rounded bg-white/5 px-2 py-[3px] text-[11px] text-[#888]"
+              >
+                FOREX
+              </span>
+              <span id="qDifficulty" class="rounded px-2 py-[3px] text-[11px]">EASY</span>
+            </div>
+            <span id="qTimer" class="font-mono text-lg text-[#daa74b]">8</span>
+          </div>
+          <p id="qText" class="m-0 mb-[14px] text-base font-medium">Question...</p>
+          <div id="qAnswers" class="grid grid-cols-2 gap-2"></div>
+          <div id="qFeedback" class="mt-[10px] h-5 text-[13px]"></div>
+        </div>
+        <!-- START / GAME OVER -->
+        <div id="startBox" class="panel p-6 text-center">
+          <h1 class="m-0 mb-[6px] text-[26px] text-[#daa74b]">TRADING COMBAT · STICKMAN</h1>
+          <p class="m-0 mb-4 text-[13px] text-[#888]">
+            Answer correctly → 6 seconds to move & shoot. Wrong → 3 seconds, half damage.
+          </p>
+          <button id="startBtn" class="btn-primary">START MATCH</button>
+          <p class="mt-[10px] text-[11px] text-[#666]">Enter = start / restart</p>
+        </div>
+        <div id="gameOverBox" class="panel hidden p-6 text-center">
+          <h1 id="goTitle" class="m-0 mb-2 text-[30px] text-[#daa74b]">TEAM A WINS</h1>
+          <p id="goScore" class="m-0 mb-4 text-[#888]">5 — 3</p>
+          <button id="playAgainBtn" class="btn-primary">PLAY AGAIN</button>
+        </div>
+        <!-- KILL FEED -->
+        <div id="killFeed" class="pointer-events-none fixed right-4 top-4 z-50 flex flex-col gap-[6px]"></div>
+      </div>
+    </div>
+  </div>
+  <script src="js/game.js"></script>
+</body>
+</html>

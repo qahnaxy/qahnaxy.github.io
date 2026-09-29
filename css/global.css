@@ -1,4 +1,21 @@
 /* [SECTION: carousel scrollbar utility] */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #f8fafc;
+}
+
+html::-webkit-scrollbar {
+  width: 6px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #3b82f6;
+}
+
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
